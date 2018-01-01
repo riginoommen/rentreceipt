@@ -1,0 +1,90 @@
+\documentclass[a4paper]{article}
+
+\usepackage[top=4cm, bottom=1.5cm, left=2cm, right=2cm]{geometry}
+\usepackage{tfrupee}
+\usepackage{relsize}
+
+
+\newcommand{\raisa}[2]{{#1}\nolinebreak[4]\hspace{-.05em}\raisebox{.4ex}{\relsize{-2}{\textbf{#2}}}}
+\def\mrname{\raisebox{0.0ex}{\relsize{-1}{Mr. }}John Smith }
+
+\title{Rent Receipt}
+\date{\today }
+\xdef\receiptnum{100881}
+\xdef\stamp{}
+
+
+
+\makeatletter
+\let\thetitle\@title
+\makeatother
+
+\usepackage[pdfencoding=auto,unicode, bookmarks=false, colorlinks=false, pdfborder={0 0 0},pdftitle={Rent Receipt}, pdfauthor={Jos Collin}, pdfsubject={Rent Receipt}, pdfkeywords={Rent, Receipt}]{hyperref}
+\pagestyle{empty}
+\usepackage[table]{xcolor}
+\usepackage{multicol}
+\usepackage[norule]{footmisc}
+
+
+% the right shift of the right blocks
+\xdef\rightalignment{11cm}
+
+% footnote style
+\def\footnotestyle#1{%
+  {\textsf{\color{footnotegray}\fontsize{3mm}{0mm}\selectfont #1}}%
+}
+
+% change color of footnote marks
+\makeatletter
+\renewcommand\@makefntext[1]{%
+  \parindent 1em\noindent
+  \hb@xt@1.8em{%
+  \hss\@textsuperscript{\normalfont\color{footnoteblue}\@thefnmark}}#1}
+\makeatother
+
+
+\hypersetup
+{
+	colorlinks=true,
+	urlcolor=blue,
+	linkcolor=blue
+}
+
+\begin{document}
+
+\kern -5mm
+
+\leavevmode\kern \rightalignment\kern -3mm \colorbox{red!35}{
+	\kern 1mm\begin{minipage}[t]{0.5\textwidth}
+		\color{black}
+		\vskip -2mm
+		{\color{black!95}\fontsize{1.0cm}{1.0cm}\selectfont %
+			\vbox to 1cm{\vss \leavevmode \kern -1mm %
+				Rent Receipt%
+}}
+\kern 3mm
+
+\leavevmode\kern 1mm \parbox{0.70\textwidth}{\ttfamily \today }
+\vspace{1mm}
+	\end{minipage}
+}
+
+\vskip 2cm
+
+This is to acknowledge that I have received the sum of \textbf{\rupee 30000} from \mrname of Tah Der India Private Ltd. as rent for the period from \textbf{01--Apr--2017} to \textbf{30--Jun--2017} for the property situated at \raisa{}{\#}1000, \raisa{Tower }{\#}01, Amanora Park Town, Hadapsar, Pune -- 411 028.
+
+\vskip 1.5cm                                                                                                                                      
+
+% The below code really needs improvement. But I found this is easier to finish the work for now.
+\setlength{\columnsep}{-10cm}
+\begin{multicols}{2}
+\noindent Received by:\\
+\stamp{\vspace{0cm}\hspace{4.25cm}\framebox(30,30){\scriptsize Stamp}} \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\
+Jane Roe,\\
+\raisa{PAN }{\#}ABCDE1234A\\ \\
+\raisa{}{\#}2000, Tower \raisa{}{\#}02,\\
+Amanora Park Town,\\
+Hadapsar, Pune -- 411 028.\\
+\end{multicols}
+
+\end{document}
