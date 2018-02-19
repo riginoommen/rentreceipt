@@ -1,4 +1,4 @@
-## Rentreceipt
+# Rent Receipt Generator
 Rent Receipt for Employees in India
 
 #### Dependencies
@@ -6,7 +6,12 @@ Rent Receipt for Employees in India
 
 To create your Rent Receipt pdf file:
 
-1. Install LaTeX.
-2. Modify the rentreceipt.tex and execute:
+### Prerequisites
+1. Install texlive-relsize.noarch package
+2. Install LaTeX.
 
+### Steps
+1. Modify the rentreceipt.tex with your information and execute:
+```
 $ pdflatex --jobname=rentreceipt rentreceipt.tex
+```
