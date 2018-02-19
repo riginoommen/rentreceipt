@@ -1,5 +1,8 @@
-# rentreceipt
+## Rentreceipt
 Rent Receipt for Employees in India
+
+#### Dependencies
+1. Install 'texlive-latex' Package for RPM and Debian based distributions
 
 To create your Rent Receipt pdf file:
 
